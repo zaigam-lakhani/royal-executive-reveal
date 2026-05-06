@@ -1,100 +1,63 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Briefcase, HardHat, Check } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
-import { Banknote, Building2, Briefcase, Landmark, Plane, Anchor } from "lucide-react";
+import { useI18n } from "@/i18n/I18nProvider";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Synaps Group" },
-      {
-        name: "description",
-        content: "Private wealth, executive advisory, real assets, family office and sovereign partnerships.",
-      },
-      { property: "og:title", content: "Services — Synaps Group" },
-      { property: "og:description", content: "A private suite of services for principals, families and institutions." },
+      { title: "Mining Services — Synaps Group" },
+      { name: "description", content: "Mining consulting, mandate buy & sell, exploration, operations and technical consulting." },
+      { property: "og:title", content: "Mining Services — Synaps Group" },
     ],
   }),
   component: ServicesPage,
 });
 
-const SERVICES = [
-  {
-    icon: Banknote,
-    title: "Private Capital",
-    text: "Discretionary deployment into majority and minority positions across regulated industries.",
-    pts: ["Direct equity", "Structured credit", "Co-investment"],
-  },
-  {
-    icon: Briefcase,
-    title: "Executive Advisory",
-    text: "Counsel to founders and boards on succession, governance and complex transactions.",
-    pts: ["M&A advisory", "Succession planning", "Board mandates"],
-  },
-  {
-    icon: Building2,
-    title: "Real Assets",
-    text: "Trophy real estate, hospitality and infrastructure across European and Gulf gateway cities.",
-    pts: ["Prime real estate", "Hospitality", "Infrastructure"],
-  },
-  {
-    icon: Landmark,
-    title: "Family Office",
-    text: "End-to-end stewardship of family wealth, philanthropy and intergenerational transfer.",
-    pts: ["Wealth structuring", "Philanthropy", "Trust services"],
-  },
-  {
-    icon: Plane,
-    title: "Sovereign Partnerships",
-    text: "Curated alliances with sovereign wealth funds and state-aligned investment vehicles.",
-    pts: ["Joint ventures", "Co-investment", "Strategic mandates"],
-  },
-  {
-    icon: Anchor,
-    title: "Maritime & Aviation",
-    text: "Acquisition, structuring and operation of private maritime and aviation assets.",
-    pts: ["Yacht programs", "Private aviation", "Asset structuring"],
-  },
-];
-
 function ServicesPage() {
+  const { t } = useI18n();
+
+  const SERVICES = [
+    {
+      icon: Briefcase,
+      title: t("services.s1.title"),
+      text: t("services.s1.text"),
+      bullets: [t("services.s1.b1"), t("services.s1.b2"), t("services.s1.b3")],
+    },
+    {
+      icon: HardHat,
+      title: t("services.s2.title"),
+      text: t("services.s2.text"),
+      bullets: [t("services.s2.b1"), t("services.s2.b2"), t("services.s2.b3"), t("services.s2.b4")],
+    },
+  ];
+
   return (
-    <section className="relative pt-40 pb-32">
-      <div
-        className="pointer-events-none absolute inset-x-0 top-0 h-[40rem] opacity-40"
-        style={{ background: "var(--gradient-radial-gold)" }}
-      />
+    <section className="relative pt-40 pb-28">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-[40rem] opacity-40" style={{ background: "var(--gradient-radial-gold)" }} />
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal>
           <div className="max-w-3xl">
-            <span className="text-xs uppercase tracking-luxury text-gold">Our Practice</span>
-            <h1 className="mt-6 font-serif text-5xl font-light leading-tight text-ivory sm:text-6xl lg:text-7xl">
-              Services rendered with <span className="text-gradient-gold italic">absolute discretion.</span>
-            </h1>
-            <p className="mt-8 text-lg text-ivory/75">
-              A complete suite of services delivered by a single, integrated house — never outsourced,
-              never delegated.
-            </p>
+            <span className="text-xs uppercase tracking-luxury text-gold">{t("services.eyebrow")}</span>
+            <h1 className="mt-6 font-serif text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">{t("services.title")}</h1>
+            <p className="mt-6 text-lg text-ivory/75">{t("services.subtitle")}</p>
           </div>
         </Reveal>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">
           {SERVICES.map((s, i) => (
-            <Reveal key={s.title} delay={(i % 3) * 120}>
-              <div className="glass-card group relative h-full rounded-2xl p-8">
-                <div
-                  className="grid h-14 w-14 place-items-center rounded-xl transition-transform duration-500 group-hover:scale-110"
-                  style={{ background: "var(--gradient-gold)" }}
-                >
+            <Reveal key={s.title} delay={i * 150}>
+              <div className="glass-card h-full rounded-3xl p-10">
+                <div className="grid h-14 w-14 place-items-center rounded-xl" style={{ background: "var(--gradient-gold)" }}>
                   <s.icon className="h-6 w-6" style={{ color: "var(--charcoal)" }} strokeWidth={1.6} />
                 </div>
-                <h3 className="mt-8 font-serif text-2xl text-ivory">{s.title}</h3>
+                <h3 className="mt-6 font-serif text-2xl text-ivory">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.text}</p>
-                <div className="my-6 gold-divider opacity-50" />
-                <ul className="space-y-2 text-xs uppercase tracking-luxury text-ivory/70">
-                  {s.pts.map((p) => (
-                    <li key={p} className="flex items-center gap-3">
-                      <span className="h-px w-4 bg-gold" />
-                      {p}
+                <ul className="mt-6 space-y-3">
+                  {s.bullets.map((b) => (
+                    <li key={b} className="flex items-start gap-3 text-sm text-ivory/85">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                      <span>{b}</span>
                     </li>
                   ))}
                 </ul>
