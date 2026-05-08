@@ -38,13 +38,29 @@ function AboutPage() {
         <div className="mt-16 grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal>
             <div className="space-y-6 text-base leading-relaxed text-ivory/80">
+              <p className="border-l-2 border-gold/60 pl-5 font-serif text-xl italic text-ivory/90">
+                « Le Groupe Synaps offre une expertise minière, du commerce international équitable et des projets miniers à impact social selon les normes du modèle Greenfield Mining. »
+              </p>
               <p>{t("about.p1")}</p>
               <p>{t("about.p2")}</p>
+              <p>
+                Synaps Group is a multi-sector investment group and private holding company. Our business model focuses on long-term value creation through strategic partnerships and investments, with a geographical focus on <span className="text-gold">Madagascar and the Middle East</span>.
+              </p>
             </div>
           </Reveal>
           <Reveal delay={150}>
-            <div className="overflow-hidden rounded-3xl shadow-elegant">
-              <img src={aboutImg} alt="Synaps Group boardroom" loading="lazy" width={1600} height={1000} className="h-full w-full object-cover" />
+            <div className="space-y-6">
+              <div className="overflow-hidden rounded-3xl shadow-elegant">
+                <img src={aboutImg} alt="Synaps Group boardroom" loading="lazy" width={1600} height={1000} className="h-full w-full object-cover" />
+              </div>
+              <div className="glass-card rounded-2xl p-6">
+                <div className="text-[10px] uppercase tracking-luxury text-gold">Sectors of Activity</div>
+                <ul className="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm text-ivory/85">
+                  {["Real Estate","Civil Engineering","Borehole Water Drilling","Contracting","Mining","Agriculture","Technology","Project Development"].map((x)=>(
+                    <li key={x} className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-gold" />{x}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>
