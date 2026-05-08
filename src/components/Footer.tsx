@@ -25,8 +25,8 @@ export function Footer() {
           <ul className="mt-6 space-y-3 text-sm text-ivory/80">
             <li><Link to="/" className="royal-link">{t("nav.home")}</Link></li>
             <li><Link to="/about" className="royal-link">{t("nav.about")}</Link></li>
-            <li><Link to="/services" className="royal-link">{t("nav.services")}</Link></li>
-            <li><Link to="/trade" className="royal-link">{t("nav.trade")}</Link></li>
+            <li><Link to="/real-estate" className="royal-link">{t("nav.realEstate")}</Link></li>
+            <li><Link to="/mining" className="royal-link">{t("nav.mining")}</Link></li>
             <li><Link to="/association" className="royal-link">{t("nav.association")}</Link></li>
             <li><Link to="/contact" className="royal-link">{t("nav.contact")}</Link></li>
           </ul>

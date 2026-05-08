@@ -55,8 +55,8 @@ function HomePage() {
                 style={{ background: "var(--gradient-gold)", color: "var(--charcoal)" }}>
                 {t("cta.contact")} <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
               </Link>
-              <Link to="/contact" className="inline-flex items-center gap-3 rounded-full border border-[color-mix(in_oklab,var(--gold)_45%,transparent)] px-8 py-4 text-xs font-semibold uppercase tracking-luxury text-ivory transition-all duration-500 hover:border-gold hover:text-gold">
-                {t("cta.quote")}
+              <Link to="/real-estate" className="inline-flex items-center gap-3 rounded-full border border-[color-mix(in_oklab,var(--gold)_45%,transparent)] px-8 py-4 text-xs font-semibold uppercase tracking-luxury text-ivory transition-all duration-500 hover:border-gold hover:text-gold">
+                {t("cta.explore")}
               </Link>
             </div>
           </div>

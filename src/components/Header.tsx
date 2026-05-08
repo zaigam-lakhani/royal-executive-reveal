@@ -13,8 +13,8 @@ export function Header() {
   const NAV = [
     { to: "/", label: t("nav.home") },
     { to: "/about", label: t("nav.about") },
-    { to: "/services", label: t("nav.services") },
-    { to: "/trade", label: t("nav.trade") },
+    { to: "/real-estate", label: t("nav.realEstate") },
+    { to: "/mining", label: t("nav.mining") },
     { to: "/association", label: t("nav.association") },
     { to: "/contact", label: t("nav.contact") },
   ] as const;

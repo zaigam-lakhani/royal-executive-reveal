@@ -11,6 +11,8 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TradeRouteImport } from './routes/trade'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as RealEstateRouteImport } from './routes/real-estate'
+import { Route as MiningRouteImport } from './routes/mining'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AssociationRouteImport } from './routes/association'
 import { Route as AboutRouteImport } from './routes/about'
@@ -24,6 +26,16 @@ const TradeRoute = TradeRouteImport.update({
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RealEstateRoute = RealEstateRouteImport.update({
+  id: '/real-estate',
+  path: '/real-estate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MiningRoute = MiningRouteImport.update({
+  id: '/mining',
+  path: '/mining',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -52,6 +64,8 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
+  '/mining': typeof MiningRoute
+  '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
 }
@@ -60,6 +74,8 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
+  '/mining': typeof MiningRoute
+  '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
 }
@@ -69,6 +85,8 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
+  '/mining': typeof MiningRoute
+  '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
 }
@@ -79,16 +97,28 @@ export interface FileRouteTypes {
     | '/about'
     | '/association'
     | '/contact'
+    | '/mining'
+    | '/real-estate'
     | '/services'
     | '/trade'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/association' | '/contact' | '/services' | '/trade'
+  to:
+    | '/'
+    | '/about'
+    | '/association'
+    | '/contact'
+    | '/mining'
+    | '/real-estate'
+    | '/services'
+    | '/trade'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/association'
     | '/contact'
+    | '/mining'
+    | '/real-estate'
     | '/services'
     | '/trade'
   fileRoutesById: FileRoutesById
@@ -98,6 +128,8 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AssociationRoute: typeof AssociationRoute
   ContactRoute: typeof ContactRoute
+  MiningRoute: typeof MiningRoute
+  RealEstateRoute: typeof RealEstateRoute
   ServicesRoute: typeof ServicesRoute
   TradeRoute: typeof TradeRoute
 }
@@ -116,6 +148,20 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/real-estate': {
+      id: '/real-estate'
+      path: '/real-estate'
+      fullPath: '/real-estate'
+      preLoaderRoute: typeof RealEstateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mining': {
+      id: '/mining'
+      path: '/mining'
+      fullPath: '/mining'
+      preLoaderRoute: typeof MiningRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -154,6 +200,8 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AssociationRoute: AssociationRoute,
   ContactRoute: ContactRoute,
+  MiningRoute: MiningRoute,
+  RealEstateRoute: RealEstateRoute,
   ServicesRoute: ServicesRoute,
   TradeRoute: TradeRoute,
 }
