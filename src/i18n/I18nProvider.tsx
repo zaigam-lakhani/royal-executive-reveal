@@ -1,5 +1,11 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { translations, type Lang, LANGUAGES } from "./translations";
+import { extras, propertiesByLang, type PropertyT } from "./extras";
+
+// Merge extras into the main translations dictionary at module load.
+for (const lang of Object.keys(extras) as Lang[]) {
+  Object.assign(translations[lang], extras[lang]);
+}
 
 interface I18nCtx {
   lang: Lang;
