@@ -96,12 +96,12 @@ function MiningPage() {
         <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <div className="max-w-3xl">
-              <span className="text-xs uppercase tracking-luxury text-gold">Synaps Mining</span>
+              <span className="text-xs uppercase tracking-luxury text-gold">{t("mining.eyebrow")}</span>
               <h1 className="mt-6 font-serif text-4xl font-light leading-tight text-ivory sm:text-5xl lg:text-6xl">
-                Exploration, Operations & Global Mineral Export
+                {t("mining.title")}
               </h1>
               <p className="mt-6 text-lg text-ivory/75">
-                Greenfield Mining standards, fair international trade and end-to-end mineral export from Madagascar.
+                {t("mining.subtitle")}
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Link to="/contact" className="inline-flex items-center gap-3 rounded-full px-7 py-3.5 text-xs font-semibold uppercase tracking-luxury shadow-gold transition-all duration-500 hover:-translate-y-0.5"
