@@ -139,7 +139,7 @@ function MiningPage() {
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <Reveal>
             <div className="max-w-2xl">
-              <span className="text-xs uppercase tracking-luxury text-gold">Mining Services</span>
+              <span className="text-xs uppercase tracking-luxury text-gold">{t("services.eyebrow")}</span>
               <h2 className="mt-4 font-serif text-3xl font-light text-ivory sm:text-4xl">{t("services.title")}</h2>
             </div>
           </Reveal>
