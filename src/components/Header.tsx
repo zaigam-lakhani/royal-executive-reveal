@@ -77,7 +77,7 @@ export function Header() {
             {t("cta.contact")}
           </Link>
           <button
-            aria-label="Menu"
+            aria-label={t("menu.aria")}
             onClick={() => setOpen((v) => !v)}
             className="grid h-10 w-10 place-items-center rounded-full border border-[color-mix(in_oklab,var(--gold)_30%,transparent)] text-ivory lg:hidden"
           >
