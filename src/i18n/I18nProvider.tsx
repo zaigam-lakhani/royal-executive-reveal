@@ -60,5 +60,5 @@ export function useI18n() {
   return ctx;
 }
 
-export { LANGUAGES };
-export type { Lang };
+export { LANGUAGES, propertiesByLang };
+export type { Lang, PropertyT };
