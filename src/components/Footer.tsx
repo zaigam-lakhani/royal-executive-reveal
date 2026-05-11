@@ -54,7 +54,7 @@ export function Footer() {
       <div className="gold-divider opacity-50" />
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-xs text-muted-foreground lg:flex-row lg:px-10">
         <span>© {new Date().getFullYear()} {t("brand.name")}. {t("footer.rights")}</span>
-        <span className="uppercase tracking-luxury">Madagascar · Antananarivo · Toamasina</span>
+        <span className="uppercase tracking-luxury">{t("footer.cities")}</span>
       </div>
     </footer>
   );
