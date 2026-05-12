@@ -9,14 +9,22 @@ import sahaza3 from "@/assets/sahaza-i/03.jpg";
 import sahaza4 from "@/assets/sahaza-i/04.jpg";
 import sahaza5 from "@/assets/sahaza-i/05.jpg";
 import sahaza6 from "@/assets/sahaza-i/06.jpg";
+import sahaza7 from "@/assets/sahaza-i/07.jpg";
+import sahaza8 from "@/assets/sahaza-i/08.jpg";
+import sahaza9 from "@/assets/sahaza-i/09.jpg";
+import sahaza10 from "@/assets/sahaza-i/10.jpg";
 
 const SAHAZA_I_IMAGES = [
-  { src: sahaza1, alt: "SAHAZA I — Secured access road" },
+  { src: sahaza10, alt: "SAHAZA I — Plotted parcels, Ambatolampy Tsimahafotsy" },
   { src: sahaza2, alt: "SAHAZA I — Panoramic view, Ambatolampy Tsimahafotsy" },
+  { src: sahaza9, alt: "SAHAZA I — Become an owner today" },
+  { src: sahaza1, alt: "SAHAZA I — Secured access road" },
   { src: sahaza3, alt: "SAHAZA I — Open green parcels" },
   { src: sahaza4, alt: "SAHAZA I — Lifestyle at sunset" },
   { src: sahaza5, alt: "SAHAZA I — Brick-walled site entrance" },
   { src: sahaza6, alt: "SAHAZA I — Spacious land plots" },
+  { src: sahaza7, alt: "SAHAZA I — Buildable plot ready for construction" },
+  { src: sahaza8, alt: "SAHAZA I — Site perimeter wall" },
 ];
 
 export const Route = createFileRoute("/real-estate")({
