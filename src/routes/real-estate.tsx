@@ -14,6 +14,29 @@ import sahaza8 from "@/assets/sahaza-i/08.jpg";
 import sahaza9 from "@/assets/sahaza-i/09.jpg";
 import sahaza10 from "@/assets/sahaza-i/10.jpg";
 import sahaza11 from "@/assets/sahaza-i/11.jpg";
+import sahazaii1 from "@/assets/sahaza-ii/01.jpg";
+import sahazaii2 from "@/assets/sahaza-ii/02.jpg";
+import sahazaii3 from "@/assets/sahaza-ii/03.jpg";
+import sahazaii4 from "@/assets/sahaza-ii/04.jpg";
+import sahazaii5 from "@/assets/sahaza-ii/05.jpg";
+import sahazaii6 from "@/assets/sahaza-ii/06.jpg";
+import sahazaii7 from "@/assets/sahaza-ii/07.jpg";
+import sahazaii8 from "@/assets/sahaza-ii/08.jpg";
+import sahazaii9 from "@/assets/sahaza-ii/09.jpg";
+import sahazaiiMap from "@/assets/sahaza-ii/10-map.jpg";
+
+const SAHAZA_II_IMAGES = [
+  { src: sahazaii2, alt: "SAHAZA II — Plotted parcels with cleared access roads, Sabotsy Namehana" },
+  { src: sahazaii6, alt: "SAHAZA II — Panoramic plots under open sky" },
+  { src: sahazaii1, alt: "SAHAZA II — Hilltop view over Sabotsy Namehana" },
+  { src: sahazaii3, alt: "SAHAZA II — Lush green parcels and surrounding hills" },
+  { src: sahazaii5, alt: "SAHAZA II — Marked plots ready for construction" },
+  { src: sahazaii7, alt: "SAHAZA II — Subdivided land with prepared roads" },
+  { src: sahazaii9, alt: "SAHAZA II — Wide open buildable land" },
+  { src: sahazaii4, alt: "SAHAZA II — Site perimeter and access path" },
+  { src: sahazaii8, alt: "SAHAZA II — Pine-lined plots with secured boundary" },
+  { src: sahazaiiMap, alt: "SAHAZA II — Aerial location map, Antsahamaharafoza" },
+];
 
 const SAHAZA_I_IMAGES = [
   { src: sahaza10, alt: "SAHAZA I — Plotted parcels, Ambatolampy Tsimahafotsy" },
@@ -102,7 +125,7 @@ function RealEstatePage() {
                     <PropertyGallery
                       placeholderCount={6}
                       label={p.title}
-                      images={p.id === "sahaza-i" ? SAHAZA_I_IMAGES : []}
+                      images={p.id === "sahaza-i" ? SAHAZA_I_IMAGES : p.id === "sahaza-ii" ? SAHAZA_II_IMAGES : []}
                     />
 
                     <div className="grid gap-4 sm:grid-cols-2">
