@@ -3,6 +3,21 @@ import { MapPin, Ruler, Tag, Building2, Calendar, FileText, ArrowRight } from "l
 import { Reveal } from "@/components/Reveal";
 import { PropertyGallery } from "@/components/PropertyGallery";
 import { useI18n, propertiesByLang } from "@/i18n/I18nProvider";
+import sahaza1 from "@/assets/sahaza-i/01.jpg";
+import sahaza2 from "@/assets/sahaza-i/02.jpg";
+import sahaza3 from "@/assets/sahaza-i/03.jpg";
+import sahaza4 from "@/assets/sahaza-i/04.jpg";
+import sahaza5 from "@/assets/sahaza-i/05.jpg";
+import sahaza6 from "@/assets/sahaza-i/06.jpg";
+
+const SAHAZA_I_IMAGES = [
+  { src: sahaza1, alt: "SAHAZA I — Secured access road" },
+  { src: sahaza2, alt: "SAHAZA I — Panoramic view, Ambatolampy Tsimahafotsy" },
+  { src: sahaza3, alt: "SAHAZA I — Open green parcels" },
+  { src: sahaza4, alt: "SAHAZA I — Lifestyle at sunset" },
+  { src: sahaza5, alt: "SAHAZA I — Brick-walled site entrance" },
+  { src: sahaza6, alt: "SAHAZA I — Spacious land plots" },
+];
 
 export const Route = createFileRoute("/real-estate")({
   head: () => ({
@@ -74,7 +89,11 @@ function RealEstatePage() {
                   </div>
 
                   <div className="lg:col-span-3 space-y-6">
-                    <PropertyGallery placeholderCount={6} label={p.title} />
+                    <PropertyGallery
+                      placeholderCount={6}
+                      label={p.title}
+                      images={p.id === "sahaza-i" ? SAHAZA_I_IMAGES : []}
+                    />
 
                     <div className="grid gap-4 sm:grid-cols-2">
                       <div className="rounded-2xl border border-[color-mix(in_oklab,var(--gold)_18%,transparent)] bg-background/40 p-5">
