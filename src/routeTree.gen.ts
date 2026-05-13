@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as TradeRouteImport } from './routes/trade'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as RealEstateRouteImport } from './routes/real-estate'
+import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as MiningRouteImport } from './routes/mining'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AssociationRouteImport } from './routes/association'
@@ -31,6 +32,11 @@ const ServicesRoute = ServicesRouteImport.update({
 const RealEstateRoute = RealEstateRouteImport.update({
   id: '/real-estate',
   path: '/real-estate',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsRoute = ProjectsRouteImport.update({
+  id: '/projects',
+  path: '/projects',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MiningRoute = MiningRouteImport.update({
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
   '/mining': typeof MiningRoute
+  '/projects': typeof ProjectsRoute
   '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
   '/mining': typeof MiningRoute
+  '/projects': typeof ProjectsRoute
   '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/association': typeof AssociationRoute
   '/contact': typeof ContactRoute
   '/mining': typeof MiningRoute
+  '/projects': typeof ProjectsRoute
   '/real-estate': typeof RealEstateRoute
   '/services': typeof ServicesRoute
   '/trade': typeof TradeRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/association'
     | '/contact'
     | '/mining'
+    | '/projects'
     | '/real-estate'
     | '/services'
     | '/trade'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/association'
     | '/contact'
     | '/mining'
+    | '/projects'
     | '/real-estate'
     | '/services'
     | '/trade'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/association'
     | '/contact'
     | '/mining'
+    | '/projects'
     | '/real-estate'
     | '/services'
     | '/trade'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   AssociationRoute: typeof AssociationRoute
   ContactRoute: typeof ContactRoute
   MiningRoute: typeof MiningRoute
+  ProjectsRoute: typeof ProjectsRoute
   RealEstateRoute: typeof RealEstateRoute
   ServicesRoute: typeof ServicesRoute
   TradeRoute: typeof TradeRoute
@@ -155,6 +168,13 @@ declare module '@tanstack/react-router' {
       path: '/real-estate'
       fullPath: '/real-estate'
       preLoaderRoute: typeof RealEstateRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects': {
+      id: '/projects'
+      path: '/projects'
+      fullPath: '/projects'
+      preLoaderRoute: typeof ProjectsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mining': {
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   AssociationRoute: AssociationRoute,
   ContactRoute: ContactRoute,
   MiningRoute: MiningRoute,
+  ProjectsRoute: ProjectsRoute,
   RealEstateRoute: RealEstateRoute,
   ServicesRoute: ServicesRoute,
   TradeRoute: TradeRoute,

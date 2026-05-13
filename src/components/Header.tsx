@@ -15,8 +15,8 @@ export function Header() {
     { to: "/about", label: t("nav.about") },
     { to: "/real-estate", label: t("nav.realEstate") },
     { to: "/mining", label: t("nav.mining") },
+    { to: "/projects", label: t("nav.projects") },
     { to: "/association", label: t("nav.association") },
-    { to: "/contact", label: t("nav.contact") },
   ] as const;
 
   useEffect(() => {
