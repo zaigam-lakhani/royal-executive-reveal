@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 function HomePage() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
 
   const PILLARS = [
     { icon: Pickaxe, title: t("home.pillar1.title"), text: t("home.pillar1.text") },
@@ -26,7 +26,7 @@ function HomePage() {
     { icon: Handshake, title: t("home.pillar3.title"), text: t("home.pillar3.text") },
     { icon: HeartHandshake, title: t("home.pillar4.title"), text: t("home.pillar4.text") },
   ];
-  const { t, lang } = useI18n();
+  
   const zh = (s: string) => lang === "zh" ? s.replace(/,/g, "").replace(/[0-9]/g, d => "零一二三四五六七八九"[+d]).replace(/\+/g, "余") : s;
   const STATS = [
     { v: zh("5,000+"), l: t("home.stats.students") },
