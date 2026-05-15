@@ -335,6 +335,26 @@ const propEN: PropertyT[] = [
     features: ["Large-scale investment land", "Strategic Madagascar location"],
     pricing: ["Detailed information coming soon."],
   },
+  {
+    id: "analanjirofo",
+    title: "Analanjirofo Region — Soanierana Ivongo Lands",
+    subtitle: "Large-scale agribusiness & eco-tourism opportunity",
+    location: "Soanierana Ivongo, Analanjirofo Region — North-East Madagascar",
+    description: "Vast tropical lands in the heart of Madagascar's clove and vanilla region, ideal for agroforestry, eco-resorts and large agricultural ventures along the East Coast.",
+    area: "Several hundred hectares — flexible parcelling",
+    features: ["Fertile tropical soil", "Close to the East Coast & port logistics", "Suited to clove, vanilla, lychee & coconut", "Eco-tourism & lodge potential", "Near Sainte-Marie Island ferry routes"],
+    pricing: ["Contact the project manager for pricing"],
+  },
+  {
+    id: "relais-castle",
+    title: "Relais Castle Moroccan — Anosy Avaratra",
+    subtitle: "Premium Moroccan-style residence & boutique hospitality estate",
+    location: "Anosy Avaratra, Antananarivo",
+    description: "Distinctive Moroccan-inspired estate combining a residential mansion and boutique hospitality wing, set in landscaped grounds near Antananarivo.",
+    area: "Detailed information available on request",
+    features: ["Moroccan-inspired architecture", "Landscaped gardens", "Suited to luxury residence or boutique hotel", "Quiet residential location near Antananarivo"],
+    pricing: ["Contact the project manager for pricing"],
+  },
 ];
 
 const propFR: PropertyT[] = [
