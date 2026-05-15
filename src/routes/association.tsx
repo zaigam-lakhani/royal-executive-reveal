@@ -533,7 +533,7 @@ function AssociationPage() {
               </div>
               <div className="lg:col-span-2">
                 <div className="overflow-hidden rounded-3xl border border-[color-mix(in_oklab,var(--gold)_25%,transparent)] shadow-elegant bg-[oklch(0.08_0.008_60)]">
-                  <img src={imgZakat} alt="Zakat Al-Maal" loading="lazy" width={1280} height={896} className="h-80 w-full object-cover" />
+                  <img src={imgZakat} alt="Zakat Al-Maal" loading="lazy" className="h-80 w-full object-contain" />
                 </div>
               </div>
             </div>
