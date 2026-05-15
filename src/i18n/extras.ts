@@ -605,6 +605,26 @@ const propIT: PropertyT[] = [
     features: ["Terreno di investimento su larga scala", "Posizione strategica in Madagascar"],
     pricing: ["Informazioni dettagliate in arrivo."],
   },
+  {
+    id: "analanjirofo",
+    title: "Regione Analanjirofo — Terreni di Soanierana Ivongo",
+    subtitle: "Opportunità agroindustriale ed ecoturistica su larga scala",
+    location: "Soanierana Ivongo, Regione Analanjirofo — Nord-Est del Madagascar",
+    description: "Vasti terreni tropicali nel cuore della regione del chiodo di garofano e della vaniglia, ideali per agroforestazione, eco-resort e grandi imprese agricole lungo la Costa Est.",
+    area: "Diverse centinaia di ettari — lottizzazione flessibile",
+    features: ["Suolo tropicale fertile", "Vicino alla Costa Est e alla logistica portuale", "Adatto a chiodi di garofano, vaniglia, litchi e cocco", "Potenziale ecoturistico e lodge", "Vicino ai collegamenti traghetti per l'Isola di Sainte-Marie"],
+    pricing: ["Contatta il project manager per il prezzo"],
+  },
+  {
+    id: "relais-castle",
+    title: "Relais Castle Marocchino — Anosy Avaratra",
+    subtitle: "Residenza marocchina premium e tenuta boutique d'ospitalità",
+    location: "Anosy Avaratra, Antananarivo",
+    description: "Tenuta di ispirazione marocchina che unisce una residenza d'eccezione e un'ala boutique d'ospitalità, in un parco paesaggistico vicino ad Antananarivo.",
+    area: "Informazioni dettagliate su richiesta",
+    features: ["Architettura di ispirazione marocchina", "Giardini paesaggistici", "Adatta a residenza di lusso o hotel boutique", "Quartiere residenziale tranquillo vicino ad Antananarivo"],
+    pricing: ["Contatta il project manager per il prezzo"],
+  },
 ];
 
 const propZH: PropertyT[] = [
