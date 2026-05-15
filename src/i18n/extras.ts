@@ -695,6 +695,26 @@ const propZH: PropertyT[] = [
     features: ["大规模投资用地", "马达加斯加战略位置"],
     pricing: ["详细信息即将公布。"],
   },
+  {
+    id: "analanjirofo",
+    title: "Analanjirofo 大区 — Soanierana Ivongo 土地",
+    subtitle: "大规模农业与生态旅游投资机会",
+    location: "Soanierana Ivongo,Analanjirofo 大区 — 马达加斯加东北部",
+    description: "位于丁香与香草产区核心地带的广阔热带土地,适合农林业、生态度假村以及东海岸沿线的大型农业项目。",
+    area: "数百公顷 — 可灵活分割",
+    features: ["肥沃的热带土壤", "靠近东海岸与港口物流", "适合丁香、香草、荔枝与椰子", "生态旅游与生态木屋潜力", "靠近圣玛丽岛轮渡线路"],
+    pricing: ["请联系项目经理获取价格"],
+  },
+  {
+    id: "relais-castle",
+    title: "Relais Castle 摩洛哥风格庄园 — Anosy Avaratra",
+    subtitle: "顶级摩洛哥风格住宅与精品酒店庄园",
+    location: "Anosy Avaratra,塔那那利佛",
+    description: "融合豪华住宅与精品酒店翼楼的摩洛哥风格庄园,坐落于塔那那利佛附近的园林环境中。",
+    area: "详细信息可应要求提供",
+    features: ["摩洛哥风格建筑", "园林景观", "适合豪华住宅或精品酒店", "塔那那利佛附近宁静住宅区"],
+    pricing: ["请联系项目经理获取价格"],
+  },
 ];
 
 export const propertiesByLang: Record<Lang, PropertyT[]> = {
