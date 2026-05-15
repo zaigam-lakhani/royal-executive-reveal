@@ -324,14 +324,12 @@ function ProjectCard({ meta, content, reverse }: { meta: ProjectMeta; content: P
   return (
     <Reveal>
       <div className={`grid items-center gap-8 rounded-3xl border border-[color-mix(in_oklab,var(--gold)_20%,transparent)] bg-[oklch(0.11_0.008_60)/0.6] p-6 backdrop-blur-xl shadow-elegant md:grid-cols-2 md:gap-12 md:p-10 ${reverse ? "md:[&>div:first-child]:order-2" : ""}`}>
-        <div className="overflow-hidden rounded-2xl border border-[color-mix(in_oklab,var(--gold)_25%,transparent)]">
+        <div className="overflow-hidden rounded-2xl border border-[color-mix(in_oklab,var(--gold)_25%,transparent)] bg-[oklch(0.08_0.008_60)]">
           <img
             src={meta.img}
             alt={content.title}
             loading="lazy"
-            width={1280}
-            height={896}
-            className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
+            className="aspect-[4/3] w-full object-contain transition-transform duration-700 hover:scale-[1.03]"
           />
         </div>
         <div>
@@ -534,8 +532,8 @@ function AssociationPage() {
                 </div>
               </div>
               <div className="lg:col-span-2">
-                <div className="overflow-hidden rounded-3xl border border-[color-mix(in_oklab,var(--gold)_25%,transparent)] shadow-elegant">
-                  <img src={imgZakat} alt="Zakat Al-Maal" loading="lazy" width={1280} height={896} className="h-80 w-full object-cover" />
+                <div className="overflow-hidden rounded-3xl border border-[color-mix(in_oklab,var(--gold)_25%,transparent)] shadow-elegant bg-[oklch(0.08_0.008_60)]">
+                  <img src={imgZakat} alt="Zakat Al-Maal" loading="lazy" className="h-80 w-full object-contain" />
                 </div>
               </div>
             </div>
