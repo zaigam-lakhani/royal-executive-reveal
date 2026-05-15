@@ -5,19 +5,61 @@ import { PropertyGallery } from "@/components/PropertyGallery";
 import { useI18n } from "@/i18n/I18nProvider";
 import type { Lang } from "@/i18n/translations";
 
-import imgProtection from "@/assets/association/protection-sociale.jpg";
-import imgPrevention from "@/assets/association/prevention-sante.jpg";
-import imgTransport from "@/assets/association/transport-scolaire.jpg";
-import imgCartable from "@/assets/association/operation-cartable.jpg";
-import imgSoutien from "@/assets/association/soutien-scolaire.jpg";
-import imgCeremonie from "@/assets/association/ceremonie-excellence.jpg";
-import imgCamping from "@/assets/association/camping-scolaire.jpg";
-import imgInfra from "@/assets/association/infrastructures.jpg";
-import imgFormation from "@/assets/association/formation-pro.jpg";
-import imgHabillement from "@/assets/association/habillement.jpg";
-import imgRamadan from "@/assets/association/ramadan.jpg";
-import imgFamilial from "@/assets/association/soutien-familial.jpg";
-import imgZakat from "@/assets/association/zakat.jpg";
+// Original photos from the uploaded ASSOCIATION_NEURONES_MADAGASCAR document
+import docP2_1 from "@/assets/association/doc-p2-1.jpg";
+import docP2_2 from "@/assets/association/doc-p2-2.jpg";
+import docP2_3 from "@/assets/association/doc-p2-3.jpg";
+import docP3_1 from "@/assets/association/doc-p3-1.jpg";
+import docP3_2 from "@/assets/association/doc-p3-2.jpg";
+import docP3_3 from "@/assets/association/doc-p3-3.jpg";
+import docP4_1 from "@/assets/association/doc-p4-1.jpg";
+import docP4_2 from "@/assets/association/doc-p4-2.jpg";
+import docP4_3 from "@/assets/association/doc-p4-3.jpg";
+import docP4_4 from "@/assets/association/doc-p4-4.jpg";
+import docP5_1 from "@/assets/association/doc-p5-1.jpg";
+import docP5_2 from "@/assets/association/doc-p5-2.jpg";
+import docP5_3 from "@/assets/association/doc-p5-3.jpg";
+import docP6_1 from "@/assets/association/doc-p6-1.jpg";
+import docP6_2 from "@/assets/association/doc-p6-2.jpg";
+import docP6_3 from "@/assets/association/doc-p6-3.jpg";
+import docP6_4 from "@/assets/association/doc-p6-4.jpg";
+import docP7_1 from "@/assets/association/doc-p7-1.jpg";
+import docP7_2 from "@/assets/association/doc-p7-2.jpg";
+import docP8_1 from "@/assets/association/doc-p8-1.jpg";
+import docP8_2 from "@/assets/association/doc-p8-2.jpg";
+import docP9_1 from "@/assets/association/doc-p9-1.jpg";
+import docP9_2 from "@/assets/association/doc-p9-2.jpg";
+import docP10_1 from "@/assets/association/doc-p10-1.jpg";
+import docP10_2 from "@/assets/association/doc-p10-2.jpg";
+import docP10_3 from "@/assets/association/doc-p10-3.jpg";
+
+// Photo per project (mapped from the original document pages)
+const imgProtection = docP2_1;
+const imgPrevention = docP3_1;
+const imgTransport = docP3_2;
+const imgCartable = docP4_1;
+const imgSoutien = docP4_3;
+const imgCeremonie = docP5_1;
+const imgCamping = docP4_4;
+const imgInfra = docP6_1;
+const imgFormation = docP6_2;
+const imgHabillement = docP7_1;
+const imgRamadan = docP8_1;
+const imgFamilial = docP9_1;
+const imgZakat = docP10_1;
+
+// Every original photo from the uploaded document (for the full gallery)
+const ALL_DOC_IMAGES = [
+  docP2_1, docP2_2, docP2_3,
+  docP3_1, docP3_2, docP3_3,
+  docP4_1, docP4_2, docP4_3, docP4_4,
+  docP5_1, docP5_2, docP5_3,
+  docP6_1, docP6_2, docP6_3, docP6_4,
+  docP7_1, docP7_2,
+  docP8_1, docP8_2,
+  docP9_1, docP9_2,
+  docP10_1, docP10_2, docP10_3,
+];
 
 export const Route = createFileRoute("/association")({
   head: () => ({
